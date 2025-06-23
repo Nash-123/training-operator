@@ -50,6 +50,8 @@ jobs:
             GOARCH: amd64
           shell: bash
           run: |
+            sudo apt-get update
+            sudo apt-get install -y gcc-s390x-linux-gnu libc6-dev-s390x-cross
             go build -tags strictfipsruntime -a -o manager-$GOARCH cmd/training-operator.v1/main.go
 
         - name: Build linux/arm64 operator binary
