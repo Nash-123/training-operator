@@ -7,11 +7,13 @@ on:
   push:
     branches:
       - dev
+      - nishan/s390x-dev-test
     tags:
       - '**'
   pull_request:
     branches:
       - dev
+      - nishan/s390x-dev-test
 
 jobs:
     build-and-publish-operator:
